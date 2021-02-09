@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(content: params[:content])
-    render json:{ post: post }
+    redirect_to action: :index
   end
   def checked
     post = Post.find(params[:id])
